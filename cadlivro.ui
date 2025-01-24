@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Janela</class>
+ <widget class="QMainWindow" name="Janela">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>232</width>
+    <height>142</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro de Livro</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_titulo">
+      <property name="text">
+       <string>Título:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_titulo"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_autor">
+      <property name="text">
+       <string>Autor:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_autor"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_paginas">
+      <property name="text">
+       <string>Páginas:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEdit_paginas"/>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="pushButton_salvar">
+      <property name="text">
+       <string>SALVAR</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
