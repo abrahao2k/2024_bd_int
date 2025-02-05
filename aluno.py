@@ -65,6 +65,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.pushButton_limpar = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_limpar.setObjectName("pushButton_limpar")
+        self.pushButton_limpar.clicked.connect(self.limpar)
+        
         self.horizontalLayout_3.addWidget(self.pushButton_limpar)
         self.pushButton_salvar = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_salvar.setObjectName("pushButton_salvar")
@@ -133,9 +135,28 @@ class Ui_MainWindow(object):
         
         cursor.execute(cmd, (nome,curso,turno,atleta,bolsista,obs))
         conexao.commit()
-        print("GRAVADO COM SUCESSO")
+        
+        
+        from PyQt5.QtWidgets import QMessageBox
+        msg = QMessageBox()
+        msg.setWindowTitle("Aviso")
+        msg.setText("GRAVADO COM SUCESSO")
+        msg.exec_()
+        
+        self.limpar()
+        #print("GRAVADO COM SUCESSO")
         cursor.close()
         conexao.close()
+
+
+    def limpar(self):
+        self.lineEdit_nome.setText("")
+        self.comboBox_curso.setCurrentIndex(-1)
+        self.radioButton_manha.setChecked(True)
+        self.checkBox_atleta.setChecked(False)
+        self.checkBox_bolsista.setChecked(False)
+        self.plainTextEdit_obs.setPlainText("")
+        
 
 
 
